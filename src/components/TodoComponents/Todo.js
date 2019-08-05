@@ -8,7 +8,7 @@ class Todo extends React.Component {
   render() {
     return (
       <>
-        <p>{this.props.task.task}</p>
+        <p>{this.props.todo.task}</p>
       </>
     );
   }
