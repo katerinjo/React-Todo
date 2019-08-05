@@ -22,14 +22,22 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   constructor() {
     super();
+
+    this.state = {
+      todos: []
+    };
+  }
+
+  add = todo => {
+    this.setState({todos: [...this.state.todos, todo]})
   }
 
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todos={testData} />
-        <TodoForm />
+        <TodoList todos={this.state.todos} />
+        <TodoForm subFun={this.add} />
       </div>
     );
   }
