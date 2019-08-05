@@ -13,7 +13,7 @@ class TodoList extends React.Component {
     return (
       <ul>
         {this.props.todos.map(todo => (
-          <Todo todo={todo} />
+          <Todo todo={todo} updateFun={this.props.updateFun} />
         ))}
       </ul>
     );

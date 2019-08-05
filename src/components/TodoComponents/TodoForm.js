@@ -15,7 +15,6 @@ class Form extends React.Component {
 
   submit = ev => {
     ev.preventDefault();
-    console.log(this.props.subFun)
     this.props.subFun({
       task: this.state.text,
       id: Date.now(),

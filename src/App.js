@@ -29,14 +29,34 @@ class App extends React.Component {
   }
 
   add = todo => {
+    console.log(this.state.todos)
     this.setState({todos: [...this.state.todos, todo]})
+  }
+
+  update = todo => {
+    console.log('update(todo)', todo)
+    console.log('current', this.state.todos)
+    this.setState({todos: this.state.todos.map(old => {
+      if (old.id == todo.id) {
+        return {...old, ...todo};
+      } else {
+        return old;
+      }
+    })})
+  }
+
+  toggle = todo => {
+    this.update({
+      ...todo,
+      completed: !todo.completed
+    });
   }
 
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todos={this.state.todos} />
+        <TodoList todos={this.state.todos} updateFun={this.toggle}/>
         <TodoForm subFun={this.add} />
       </div>
     );
