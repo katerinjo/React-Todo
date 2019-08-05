@@ -18,7 +18,7 @@ class Form extends React.Component {
     console.log(this.props.subFun)
     this.props.subFun({
       task: this.state.text,
-      id: 42,
+      id: Date.now(),
       completed: false
     });
     this.setState({text: ''});
