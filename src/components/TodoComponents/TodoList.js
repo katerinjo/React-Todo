@@ -12,7 +12,7 @@ class TodoList extends React.Component {
   render() {
     return (
       <>
-        <Todo />
+        <Todo task={this.props.tasks[0]}/>
       </>
     );
   }
