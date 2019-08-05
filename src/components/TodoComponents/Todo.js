@@ -6,11 +6,7 @@ class Todo extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        <p>{this.props.todo.task}</p>
-      </>
-    );
+    return <li>{this.props.todo.task}</li>;
   }
 }
 

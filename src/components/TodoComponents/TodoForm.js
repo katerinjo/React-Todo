@@ -21,6 +21,7 @@ class Form extends React.Component {
       id: 42,
       completed: false
     });
+    this.setState({text: ''});
   }
 
   render() {

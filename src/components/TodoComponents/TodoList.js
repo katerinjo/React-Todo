@@ -11,11 +11,11 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <>
+      <ul>
         {this.props.todos.map(todo => (
           <Todo todo={todo} />
         ))}
-      </>
+      </ul>
     );
   }
 }
